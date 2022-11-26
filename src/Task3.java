@@ -8,12 +8,12 @@ public class Task3 {
         return map;
     }
 
-    public void addToMap(String key, int value) {
+    public void addToMap(String key, Integer value) {
         if (!map.containsKey(key)) {
             map.put(key, value);
         } else {
-            int valueFromMap = map.get((key));
-            if (valueFromMap == value) {
+            Integer valueFromMap = map.get(key);
+            if (valueFromMap.equals(value)) {
                 throw new IllegalArgumentException("Такой объект (ключ+значение) уже существует");
             } else {
                 map.put(key,value);
